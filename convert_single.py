@@ -31,7 +31,8 @@ def main():
     fname = args.filename
     model_lst = load_all_models()
     start = time.time()
-    full_text, images, out_meta = convert_single_pdf(fname, model_lst, max_pages=args.max_pages, langs=langs, batch_multiplier=args.batch_multiplier, start_page=args.start_page, ocr_all_pages=args.ocr_all_pages)
+    full_text, images, out_meta = convert_s
+    ingle_pdf(fname, model_lst, max_pages=args.max_pages, langs=langs, batch_multiplier=args.batch_multiplier, start_page=args.start_page, ocr_all_pages=args.ocr_all_pages)
 
     fname = os.path.basename(fname)
     subfolder_path = save_markdown(args.output, fname, full_text, images, out_meta)
